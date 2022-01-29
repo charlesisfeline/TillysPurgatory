@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="aumsum_angey.png"><SubTexture name="Idle0000" x="0" y="0" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Idle0001" x="583" y="0" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Idle0002" x="1166" y="0" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Idle0003" x="0" y="714" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Down0000" x="583" y="714" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Down0001" x="1166" y="714" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Left0000" x="0" y="1428" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Left0001" x="583" y="1428" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Right0000" x="1166" y="1428" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Right0001" x="0" y="2142" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Up0000" x="583" y="2142" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+<SubTexture name="Up0001" x="1166" y="2142" width="583" height="714" frameX="0" frameY="0" frameWidth="583" frameHeight="714" />
+</TextureAtlas>
