@@ -2429,14 +2429,7 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		var funny:Float = (healthBar.percent * 0.01) + 0.01;
 
-		//icon squish funny haha
-		iconP1.setGraphicSize(Std.int(iconP1.width + (50 * (2 - funny))),Std.int(iconP1.height - (25 * (2 - funny))));
-		iconP2.setGraphicSize(Std.int(iconP2.width + (50 * (2 - funny))),Std.int(iconP2.height - (25 * (2 - funny))));
-
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
 
 		var iconOffset:Int = 26;
 
