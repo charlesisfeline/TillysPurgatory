@@ -2381,11 +2381,21 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			scoreTxt.text = 'Score: ' + songScore + 'Health:' + Math.round(health * 50) + "%" + ' | Combo Breaks: ' + songMisses + ' | Accuracy: 0% | N/A';
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			scoreTxt.text = 'Score: ' + songScore + 'Health:' + Math.round(health * 50) + "%" + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Math.floor(ratingPercent * 100) + '% | ' + ratingFC;
 		}
 
+		if(cpuControlled) {
+			scoreTxt.text = 'Score: ' + songScore + 'Health:' + Math.round(health * 50) + "%" + ' | Combo Breaks: ' + songMisses + 'Screw you! | Instakill when Missed ';
+		}
+		if(instakillOnMiss) {
+			scoreTxt.text = 'Score: ' + songScore + 'Health:' + Math.round(health * 50) + "%" + ' | Combo Breaks: ' + songMisses + 'Cheater! | BotPlay ';
+		}
+		if(practiceMode) {
+			scoreTxt.text = 'Score: ' + songScore + 'Health:' + Math.round(health * 50) + "%" + ' | Combo Breaks: ' + songMisses + ' | Practice Mode ';
+		}
+		
 		if(botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
@@ -4536,13 +4546,12 @@ class PlayState extends MusicBeatState
 
 		var funny:Float = (healthBar.percent * 0.01) + 0.01;
 
-		//icon squish funny haha
-		iconP1.setGraphicSize(Std.int(iconP1.width + (50 * (2 - funny))),Std.int(iconP1.height - (25 * (2 - funny))));
+		iconP1.setGraphicSize(Std.int(iconP1.width + (50 * funny)),Std.int(iconP2.height - (25 * funny)));
 		iconP2.setGraphicSize(Std.int(iconP2.width + (50 * (2 - funny))),Std.int(iconP2.height - (25 * (2 - funny))));
-
+	
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
-		
+
 		if(curBeat % 2 == 0) {
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
 			{
