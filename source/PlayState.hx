@@ -70,16 +70,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Crud', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['High risk of dying', 0.2], //From 0% to 19%
+		['Dont die', 0.4], //From 20% to 39%
+		['Its not overcharted, youre just bad', 0.5], //From 40% to 49%
+		['Get Good', 0.6], //From 50% to 59%
+		['Is it possible?', 0.69], //From 60% to 68%
+		['Too Memish!', 0.7], //69%
+		['Hmmmm...', 0.8], //From 70% to 79%
+		['Pretty Good!', 0.9], //From 80% to 89%
+		['What?', 1], //From 90% to 99%
+		['Purgatory Master!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
@@ -1027,7 +1027,7 @@ class PlayState extends MusicBeatState
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "AUTOPLAY MODE", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.GREEN, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.RED);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1435,7 +1435,7 @@ class PlayState extends MusicBeatState
 			}
 			return;
 		} else {
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
+			FlxG.log.warn('WHERE THE HECK IS THE VIDEO FILE: ' + fileName);
                         if(endingSong) {
 		                endSong();
 		        } else {
@@ -1480,7 +1480,7 @@ class PlayState extends MusicBeatState
 			psychDialogue.cameras = [camHUD];
 			add(psychDialogue);
 		} else {
-			FlxG.log.warn('Your dialogue file is badly formatted!');
+			FlxG.log.warn('I think you smashed your Dialogue!');
 			if(endingSong) {
 				endSong();
 			} else {
