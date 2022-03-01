@@ -39,7 +39,7 @@ class Achievements {
 		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",				'week6_nomiss',			'week6',		false],
 		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			'week7',		true],
 		["Whoops!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				null, 			false],
-		["HOW IS THIS EVEN POSSIBLE? HOW IS IT POSSIBLE?!?!?!?!",				"Complete a Song with a rating of 100%.",			'ur_good',				null,			false],
+		["Perfect!",				"Complete a Song with a rating of 100%.",			'ur_good',				null,			false],
 		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",			'roadkill_enthusiast',	null, 			false],
 		["Oversinging Much...?",		"Hold down a note for 10 seconds.",					'oversinging',			null,			false],
 		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					null, 			false],
